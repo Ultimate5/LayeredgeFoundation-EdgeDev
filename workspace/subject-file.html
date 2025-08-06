@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Marks Table & Course Selection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #e0e0e0;
+    }
+
+    select {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Student Marks Table -->
+  <h2>Student Marks Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Serial Number</th>
+        <th>Name</th>
+        <th>Maths</th>
+        <th>Science</th>
+        <th>English</th>
+        <th>Total Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Alice</td>
+        <td>85</td>
+        <td>90</td>
+        <td>78</td>
+        <td>253</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Bob</td>
+        <td>75</td>
+        <td>80</td>
+        <td>88</td>
+        <td>243</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Charlie</td>
+        <td>92</td>
+        <td>85</td>
+        <td>89</td>
+        <td>266</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Diana</td>
+        <td>68</td>
+        <td>74</td>
+        <td>80</td>
+        <td>222</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Edward</td>
+        <td>88</td>
+        <td>91</td>
+        <td>84</td>
+        <td>263</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Dropdown Menu with Optgroup -->
+  <h2>Select a Course</h2>
+  <label for="courses">Choose a course:</label>
+  <br><br>
+  <select id="courses" name="courses">
+    <optgroup label="Science">
+      <option value="physics">Physics</option>
+      <option value="chemistry">Chemistry</option>
+      <option value="biology">Biology</option>
+    </optgroup>
+
+    <optgroup label="Commerce">
+      <option value="accounting">Accounting</option>
+      <option value="business">Business Studies</option>
+      <option value="economics">Economics</option>
+    </optgroup>
+
+    <optgroup label="Arts">
+      <option value="history">History</option>
+      <option value="geography">Geography</option>
+      <option value="political-science">Political Science</option>
+    </optgroup>
+  </select>
+
+</body>
+</html>
