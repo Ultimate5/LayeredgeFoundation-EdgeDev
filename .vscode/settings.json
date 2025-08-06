@@ -1,0 +1,12 @@
+{
+    "workbench.editor.autoLockGroups": {
+        "notebookOutputEditor": true,
+        "vscode.videoPreview": true,
+        "vscode.audioPreview": true,
+        "workbench.editors.gettingStartedInput": true,
+        "imagePreview.previewEditor": true,
+        "default": true,
+        "mainThreadWebview-markdown.preview": true
+    },
+    "workbench.editor.closeOnFileDelete": true
+}
