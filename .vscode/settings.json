@@ -30,5 +30,5 @@
     "workbench.editor.scrollToSwitchTabs": true,
     "workbench.editor.sharedViewState": true,
     "workbench.editor.wrapTabs": true,
-    "liveServer.settings.port": 5503
+    "liveServer.settings.port": 5504
 }
