@@ -29,5 +29,6 @@
     "workbench.editor.revealIfOpen": true,
     "workbench.editor.scrollToSwitchTabs": true,
     "workbench.editor.sharedViewState": true,
-    "workbench.editor.wrapTabs": true
+    "workbench.editor.wrapTabs": true,
+    "liveServer.settings.port": 5501
 }
