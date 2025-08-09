@@ -1,8 +1,8 @@
 /* Reset and global box-sizing */
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 15px;
+    padding:20px;
 }
 
 /* Body styling */
@@ -16,7 +16,7 @@ body {
 /* Container for article */
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 15px auto;
     padding: 20px;
     background: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
