@@ -27,7 +27,7 @@ body {
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
     transition: background 0.3s ease; /* Smooth hover transition */
-    horizontal-align: top; /* Align cards at the top */
+    vertical-align: top; /* Align cards at the top */
 }
 
 /* Image styling */
