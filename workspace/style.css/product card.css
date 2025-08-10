@@ -118,3 +118,10 @@ body {
         margin: 10px auto;
     }
 }
+
+/* END OF THE BASE STYLE */
+.Container {
+      display flex;
+/* flex-direction: row; */
+    justify-content: space between; 
+}
