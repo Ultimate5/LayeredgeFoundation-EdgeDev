@@ -1,0 +1,127 @@
+/* Reset and global box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center cards and add spacing */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Product card styling */
+.product-card {
+    display: inline-block;
+    width: 300px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    transition: background 0.3s ease; /* Smooth hover transition */
+    vertical-align: top; /* Align cards at the top */
+}
+
+/* Image styling */
+.product-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Text styling */
+.product-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Analogous Color Scheme (Blue, Blue-Green, Green) */
+.analogous {
+    background: #1a3c5e; /* Blue */
+    color: #fff;
+    border: 2px solid #2a6b8a; /* Blue-Green */
+}
+
+.analogous h2 {
+    color: #4a9ab6; /* Lighter Blue-Green */
+}
+
+.analogous .price {
+    color: #6bc4a6; /* Green */
+}
+
+.analogous:hover {
+    background: #152f4b; /* Darker blue on hover */
+}
+
+/* Complementary Color Scheme (Blue and Orange) */
+.complementary {
+    background: #1a3c5e; /* Blue */
+    color: #fff;
+    border: 2px solid #f4a261; /* Orange */
+}
+
+.complementary h2 {
+    color: #f4a261; /* Orange */
+}
+
+.complementary .price {
+    color: #e76f51; /* Darker Orange */
+}
+
+.complementary:hover {
+    background: #152f4b; /* Darker blue on hover */
+}
+
+/* Monochrome Color Scheme (Shades of Blue) */
+.monochrome {
+    background: #3d7ea6; /* Medium Blue */
+    color: #fff;
+    border: 2px solid #1a3c5e; /* Dark Blue */
+}
+
+.monochrome h2 {
+    color: #a8d0e6; /* Light Blue */
+}
+
+.monochrome .price {
+    color: #d4e6f1; /* Very Light Blue */
+}
+
+.monochrome:hover {
+    background: #32688a; /* Darker medium blue on hover */
+}
+
+/* Responsive design */
+@media (max-width: 960px) {
+    .product-card {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+/* END OF THE BASE STYLE */
+.Container {
+      display: flex;
+/* flex-direction: row; */
+    justify-content: space between; 
+}
