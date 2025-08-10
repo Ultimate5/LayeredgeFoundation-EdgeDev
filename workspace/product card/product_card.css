@@ -1,11 +1,11 @@
 /* Reset and global box-sizing */
 * {
-    box-sizing: border-box;
+    flex box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Center cards and add spacing */
+/* space between cards and add spacing */
 body {
     font-family: 'Arial', sans-serif;
     background: #f4f4f4;
@@ -27,7 +27,7 @@ body {
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
     transition: background 0.3s ease; /* Smooth hover transition */
-    vertical-align: top; /* Align cards at the top */
+    glyph-orientation-horizontal: top; /* Align cards at the top */
 }
 
 /* Image styling */
