@@ -1,16 +1,17 @@
 /* Apply box-sizing globally */
 * {
-    flex box: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Center the profile card on the page */
+/* center the profile card on the page */
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
+    /* flex-direction: row; */
     justify-content: center;
-    align-items: top;
+    align-items: center;
     min-height: 100vh;
     background: #f4f4f4; /* Light background for contrast */
 }

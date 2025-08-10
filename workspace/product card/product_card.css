@@ -1,11 +1,11 @@
 /* Reset and global box-sizing */
 * {
-    flex box: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* space between cards and add spacing */
+/* center cards and add spacing */
 body {
     font-family: 'Arial', sans-serif;
     background: #f4f4f4;
@@ -20,14 +20,15 @@ body {
 
 /* Product card styling */
 .product-card {
-    display: inline-block;
+    display: flex;
+    /* flex-direction: row; */
     width: 300px;
     margin: 15px;
     padding: 20px;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
     transition: background 0.3s ease; /* Smooth hover transition */
-    vertical-align: top; /* Align cards at the top */
+    glyph-orientation-horizontal: baseline; /* Align cards at the top */
 }
 
 /* Image styling */
