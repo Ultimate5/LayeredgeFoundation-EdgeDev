@@ -18,16 +18,22 @@ body {
 
 /* Profile card styling */
 .profile-card {
-    background: #fff;
-    width: 300px;
+    max-width: 300px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 16px;
     text-align: center;
-    margin: 20px; /* Margin around the card */
-    padding: 20px; /* Padding inside the card */
-    border: 2px solid #1a3c5e; /* Border with a trustworthy blue */
-    border-radius: 50px; /* circular */
-    outline: 3px solid #a8d0e6; /* Outline for emphasis */
-    outline-offset: 3px; /* Space between border and outline */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* Subtle shadow for depth */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    background: #fff;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* circle */
+    object-fit: cover;
+    border: 3px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 /* Profile image styling */
