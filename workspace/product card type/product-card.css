@@ -1,6 +1,6 @@
 /* Apply box-sizing globally */
 * {
-    box-sizing: border-box;
+    flex box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -9,8 +9,8 @@
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: column;
+    align-items: top;
     min-height: 100vh;
     background: #f4f4f4; /* Light background for contrast */
 }
