@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">  
 <head>  
     <meta charset="UTF-8">  
@@ -18,10 +17,24 @@
         .profile-card img {  
             width: 120px;  
             height: 120px;  
-            border-radius: 35%; /* makes it circular */  
+            border-radius: 35%;  
             object-fit: cover;  
-            border: 3px light #ddd;  
+            border: 3px solid #ddd;  
             box-shadow: 0 4px 12px rgba(0,0,0,0.12);  
+        }  
+        .social-links {  
+            margin-top: 15px;  
+            display: flex;  
+            justify-content: center;  
+            gap: 15px;  
+        }  
+        .social-links a img {  
+            width: 30px;  
+            height: 30px;  
+            transition: transform 0.2s ease-in-out;  
+        }  
+        .social-links a img:hover {  
+            transform: scale(1.2);  
         }  
     </style>  
 </head>  
@@ -29,33 +42,19 @@
     <div class="profile-card">  
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6pIwOUxFUvKgcQGFJP2oSFCwLQ_GQXXfWjrhVt38Nawj1-KIwudsWA8i&s=10" alt="Profile Picture">  
         <h3>Abubakar Sadiq</h3>  
-        <p>Basic Skill in html website development Forefront of Layer Webpage Align with interface And detected align-in.</p>  
-<div class="profile-card">
-  <div class="social" aria-label="social links">
+        <p>Basic Skill in HTML website development. Forefront of Layer Webpage alignment with interface and detection-based alignment.</p>  
 
-    <!-- X (formerly Twitter) -->
-    <a href="https://x.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-      <svg viewBox="0 0 24 24" aria-hidden="false" focusable="true" width="32" height="32">
-        <path fill="currentColor" d="M22 5.92c-.65.29-1.35.49-2.08.58..."/>
-      </svg>
-    </a>
-
-    <!-- Discord -->
-    <a href="https://discord.gg/yourserver" target="_blank" rel="noopener noreferrer" aria-label="Discord">
-      <svg viewBox="0 0 24 24" aria-hidden="false" focusable="true" width="32" height="32">
-        <path fill="currentColor" d="M20.317 4.369a19.791 19.791 0 0 0-4.885-1.515..."/>
-      </svg>
-    </a>
-
-    <!-- LinkedIn -->
-    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-      <svg viewBox="0 0 24 24" aria-hidden="false" focusable="true" width="32" height="32">
-        <path fill="currentColor" d="M4.98 3.5C3.34 3.5 2 4.86 2 6.5s1.34 3 2.98 3..."/>
-      </svg>
-    </a>
-
-  </div>
-</div>
+        <div class="social-links">  
+            <a href="https://x.com/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023.svg" alt="X (Twitter)">
+            </a>  
+            <a href="https://discord.com/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Discord_logo.svg" alt="Discord">
+            </a>  
+            <a href="https://www.linkedin.com/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn">
+            </a>  
+        </div>  
     </div>  
 </body>  
 </html>
