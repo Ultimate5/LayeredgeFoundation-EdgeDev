@@ -43,36 +43,88 @@
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6pIwOUxFUvKgcQGFJP2oSFCwLQ_GQXXfWjrhVt38Nawj1-KIwudsWA8i&s=10" alt="Profile Picture">  
         <h3>Abubakar Sadiq</h3>  
         <p>Basic Skill in HTML website development. Forefront of Layer Webpage alignment with interface and detection-based alignment.</p>  
+       .link{
+                margin-left: auto;
+                margin-right: auto;
+                overflow: hidden;
+            }
 
-          <div class="social-links" aria-label="Social links">
-    <!-- X (Twitter) -->
-    <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Open X (Twitter) profile">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-        <!-- simple X mark (works as X icon) -->
-        <path d="M3 3l18 18M21 3L3 21" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
-      <span class="sr-only">X (Twitter)</span>
-    </a>
+            ul{
+                display: flex;
+                flex-direction: row;
+                justify-items: center;
+                list-style: none;
+                gap: 10px;
+                font-size: 20px;
+                margin-top: 10px;
+                margin-left: 95px;
+                margin-bottom: 0px;
+            }
 
-    <!-- Discord -->
-    <a href="https://discord.com/users/yourid" target="_blank" rel="noopener noreferrer" aria-label="Open Discord">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-        <!-- simplified Discord "controller" shape -->
-        <path d="M7.5 7.5c.9 0 1.6.8 1.6 1.8s-.73 1.8-1.6 1.8c-.88 0-1.6-.8-1.6-1.8S6.62 7.5 7.5 7.5zM16.5 7.5c.9 0 1.6.8 1.6 1.8s-.72 1.8-1.6 1.8c-.88 0-1.6-.8-1.6-1.8s.72-1.8 1.6-1.8z" fill="#111"/>
-        <path d="M4 6c0 0 2-2 8-2s8 2 8 2v9s-2 2-8 2-8-2-8-2V6z" stroke="#111" stroke-width="0.6" fill="none" stroke-linejoin="round"/>
-      </svg>
-      <span class="sr-only">Discord</span>
-    </a>
+            ul a{
+                text-decoration: none;
+                color: black;
+            }
 
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-        <rect x="3" y="3" width="18" height="18" rx="3" ry="3" fill="none" stroke="#111" stroke-width="0.9"/>
-        <path d="M8.3 10.5v6.5M6 9.5h4.6v7.5M15.9 9.5c1.05 0 1.85.68 1.85 2.22v4.55" stroke="#111" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span class="sr-only">LinkedIn</span>
-    </a>
+            .last{
+                background-color: chartreuse;
+                text-align: center;
+                height: 167;
+                border-radius: 17px 17px 16px 16px;
+                z-index: ;
+            }
+
+            .final{
+                font-size: 12px;
+                text-align:center;
+                padding-top: 55px;
+                transition: font-size 0.3s ease-in;
+                cursor: default;
+            }
+
+            button{
+                height: 26px;
+                border-radius: 50%;
+                border-collapse: collapse;
+                border: 0px;
+                margin-top: 5px;
+                transition: background-color 1s ease-in-out;
+                transition: color 0.3s ease-in-out;
+                cursor: pointer;
+            }
+
+            button:hover{
+                background-color:black;
+                color: white;
+            }
+
+            .ri-twitter-x-line{
+                transition: border-bottom 0.1s ease-in-out;
+            }
+
+            .ri-twitter-x-line:hover{
+                border-bottom: 3px solid black;
+                border-radius: 2px;
+            }
+
+            .ri-Discord-fill{
+                transition: border-bottom 0.1s ease-in-out;
+            }
+
+            .ri-Discord-fill:hover{
+                border-bottom: 3px solid black;
+                border-radius: 2px;
+            }
+
+            .ri-Linkedin-line{
+                transition: border-bottom 0.1s ease-in-out;
+            }
+
+            .ri-Linkedin-line:hover{
+                border-bottom: 3px solid black;
+                border-radius: 2px;
+            }
+
   </div>
-</div>
 </body>  
 </html>
