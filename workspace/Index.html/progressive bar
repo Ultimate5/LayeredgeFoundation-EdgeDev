@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Progress Bar — HTML/CSS/JS</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f3f6fb;
+      color: #0f172a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .progress-container {
+      width: min(400px, 90vw);
+    }
+
+    .progress {
+      height: 20px;
+      background: #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #60a5fa, #2563eb);
+      text-align: center;
+      line-height: 20px;
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      transition: width 0.5s ease;
+    }
+
+    .controls {
+      margin-top: 15px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    input[type="number"] {
+      width: 80px;
+      padding: 6px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      background: #2563eb;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button.secondary {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Progress Bar Example</h1>
+
+  <div class="progress-container">
+    <div class="progress">
+      <div class="progress-bar" id="progressBar">0%</div>
+    </div>
+
+    <div class="controls">
+      <input type="number" id="percentInput" min="0" max="100" value="50">
+      <button id="setBtn">Set</button>
+      <button id="fillBtn" class="secondary">Fill to 100%</button>
+      <button id="resetBtn" class="secondary">Reset</button>
+    </div>
+  </div>
+
+  <script>
+    const progressBar = document.getElementById('progressBar');
+    const percentInput = document.getElementById('percentInput');
+    const setBtn = document.getElementById('setBtn');
+    const fillBtn = document.getElementById('fillBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    function setProgress(percent) {
+      percent = Math.max(0, Math.min(100, percent));
+      progressBar.style.width = percent + '%';
+      progressBar.textContent = percent + '%';
+    }
+
+    setBtn.addEventListener('click', () => {
+      setProgress(Number(percentInput.value));
+    });
+
+    fillBtn.addEventListener('click', () => {
+      setProgress(100);
+    });
+
+    resetBtn.addEventListener('click', () => {
+      setProgress(0);
+    });
+
+    // Start at 0%
+    setProgress(0);
+  </script>
+</body>
+</html>

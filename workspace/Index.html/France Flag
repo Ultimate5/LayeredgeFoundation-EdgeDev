@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Flag of France — HTML/CSS</title>
+  <style>
+    :root{
+      --fr-blue: #0055A4;
+      --fr-white: #FFFFFF;
+      --fr-red: #EF4135;
+    }
+
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      display:flex;
+      min-height:100vh;
+      align-items:center;
+      justify-content:center;
+      margin:0;
+      background:#f3f6fb;
+    }
+
+    /* Flag wrapper keeps the 2:3 aspect ratio and is responsive */
+    .flag-france{
+      width: min(420px, 90vw);      /* scale down on small screens */
+      aspect-ratio: 3 / 2;         /* width : height = 3 : 2 (common display look) */
+      display:flex;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius:6px;
+      overflow:hidden;
+      box-shadow: 0 8px 24px rgba(2,6,23,0.06);
+    }
+
+    /* three equal vertical panels */
+    .flag-france > .panel{
+      flex:1 1 0;
+      height:100%;
+    }
+    .panel.blue  { background: var(--fr-blue); }
+    .panel.white { background: var(--fr-white); }
+    .panel.red   { background: var(--fr-red); }
+
+    /* Small caption */
+    .caption{
+      text-align:center;
+      margin-top:14px;
+      color:#0f172a;
+      font-size:14px;
+      opacity:0.85;
+    }
+
+    /* make flag slightly narrower on very small screens */
+    @media (max-width:360px){
+      .flag-france{ width: 320px; }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <!-- role and aria-label for accessibility -->
+    <div class="flag-france" role="img" aria-label="Flag of France. Three vertical bands of blue, white and red (left to right).">
+      <div class="panel blue" aria-hidden="true"></div>
+      <div class="panel white" aria-hidden="true"></div>
+      <div class="panel red" aria-hidden="true"></div>
+    </div>
+
+    <div class="caption">Flag of France — blue, white, red (left → right)</div>
+  </div>
+</body>
+</html>

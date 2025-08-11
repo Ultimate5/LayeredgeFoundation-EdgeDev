@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flag of Japan — HTML/CSS</title>
+  <style>
+    :root{
+      --hinomaru: #BC002D; /* traditional red */
+      --field: #ffffff;
+    }
+
+    /* Page layout */
+    body{
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background: #f3f6fb;
+      color: #0f172a;
+    }
+
+    /* Flag container: width/height = 3/2 (i.e. flag ratio 2:3 height:width) */
+    .flag-japan{
+      width: min(480px, 90vw); /* responsive */
+      aspect-ratio: 3 / 2;    /* width / height = 3:2 => height:width = 2:3 */
+      background: var(--field);
+      display: grid;
+      place-items: center;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+      border: 1px solid rgba(2,6,23,0.06);
+    }
+
+    /* Red disc (Hinomaru): diameter ~ 3/5 of flag height */
+    .hinomaru {
+      width: calc(60%);   /* 60% of the flag height when centered inside the container */
+      height: calc(60%);  /* same as width to keep it circular */
+      /* When the container uses aspect-ratio, grid centering ensures the disc is centered. */
+      border-radius: 50%;
+      background: var(--hinomaru);
+      box-shadow: 0 6px 18px rgba(188,0,45,0.12) inset;
+    }
+
+    /* Slightly smaller on very small screens */
+    @media (max-width:360px){
+      .flag-japan { width: 320px; }
+      .hinomaru { width: 55%; height: 55%; }
+    }
+
+    .caption {
+      text-align:center;
+      margin-top:14px;
+      font-size:14px;
+      opacity:0.9;
+    }
+
+    /* Optional utility to show exact pixel height (for debugging) */
+    .debug { font-size:12px; opacity:0.6; margin-top:8px; }
+  </style>
+</head>
+<body>
+  <div>
+    <!-- Accessibility: role and aria-label -->
+    <div class="flag-japan" role="img" aria-label="Flag of Japan: white field with a centered crimson-red disc">
+      <div class="hinomaru" aria-hidden="true"></div>
+    </div>
+
+    <div class="caption">Flag of Japan — red disc (Hinomaru) centered on white field</div>
+  </div>
+</body>
+</html>
