@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flags + Progress Bar</title>
+  <style>
+    :root{
+      --card-bg: #f7f7fb;
+      --card-radius: 12px;
+      --shadow: 0 6px 18px rgba(18,24,40,0.08);
+      --accent: #2563eb;
+    }
+
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin: 24px;
+      background: linear-gradient(180deg,#ffffff 0%, #f2f6ff 100%);
+      color: #0f172a;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    h1{
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+
+    .card{
+      background: var(--card-bg);
+      border-radius: var(--card-radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .flag{
+      display: inline-block;
+      border: 1px solid rgba(2,6,23,0.06);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(16,24,40,0.04);
+    }
+
+    /* --- France flag (vertical tricolor, ratio commonly 2:3) --- */
+    .flag--france{
+      width: 300px;
+      height: 200px; /* 3:2 aspect ratio for nice display */
+      display: flex;
+    }
+    .france__panel{
+      flex: 1 1 0;
+      height: 100%;
+    }
+    .france__blue{ background: #0055A4; }   /* French blue */
+    .france__white{ background: #ffffff; }
+    .france__red{ background: #EF4135; }    /* French red */
+
+    /* Make smaller on narrow screens */
+    @media (max-width:420px){
+      .flag--france{ width: 220px; height: 147px; }
+    }
+
+    /* --- Japan flag (white field, red circle centered) --- */
+    .flag--japan{
+      width: 300px;
+      height: 200px; /* common display ratio for examples */
+      display: grid;
+      place-items: center;
+      background: #fff;
+    }
+    .japan__disc{
+      width: 120px;  /* circle diameter approx 3/5 of height keeps classic look */
+      height: 120px;
+      border-radius: 50%;
+      background: #BC002D; /* Hinomaru red */
+      box-shadow: 0 4px 10px rgba(188,0,45,0.12) inset;
+    }
+    @media (max-width:420px){
+      .flag--japan{ width: 220px; height: 147px; }
+      .japan__disc{ width: 90px; height: 90px; }
+    }
+
+    /* --- Progress bar area --- */
+    .progress-wrap{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .progress-label{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:8px;
+      font-size:14px;
+    }
+
+    .progress{
+      height: 18px;
+      background: linear-gradient(90deg,#e6eefc,#fbfdff);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(2,6,23,0.04);
+      position: relative;
+    }
+    .progress__bar{
+      height:100%;
+      width: 0%;
+      background: linear-gradient(90deg,#60a5fa, #2563eb);
+      border-radius: 12px 0 0 12px;
+      transition: width 700ms cubic-bezier(.2,.9,.3,1);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(37,99,235,0.14) inset;
+    }
+
+    .controls{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    input[type="number"]{
+      width:96px;
+      padding:6px 8px;
+      border-radius:8px;
+      border:1px solid rgba(2,6,23,0.08);
+      background: white;
+      font-size:13px;
+    }
+    button{
+      padding:8px 12px;
+      border-radius:10px;
+      border: none;
+      background: var(--accent);
+      color: white;
+      cursor:pointer;
+      font-weight:600;
+    }
+    button.secondary{
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    footer.hint{
+      margin-top:10px;
+      color:#475569;
+      font-size:13px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Flags & Progress bar — demo</h1>
+
+  <div class="grid">
+    <!-- FRANCE -->
+    <div class="card" aria-labelledby="frTitle">
+      <h2 id="frTitle" style="font-size:15px;margin:0 0 12px 0;">Flag — France 🇫🇷</h2>
+      <div class="flag flag--france" role="img" aria-label="Flag of France: vertical blue, white, red">
+        <div class="france__panel france__blue" aria-hidden="true"></div>
+        <div class="france__panel france__white" aria-hidden="true"></div>
+        <div class="france__panel france__red" aria-hidden="true"></div>
+      </div>
+      <p class="hint" style="margin-top:10px;color:#475569;font-size:13px;">Three vertical bands, blue at the hoist (left), white in the center, red at the fly (right).</p>
+    </div>
+
+    <!-- JAPAN -->
+    <div class="card" aria-labelledby="jpTitle">
+      <h2 id="jpTitle" style="font-size:15px;margin:0 0 12px 0;">Flag — Japan 🇯🇵</h2>
+      <div class="flag flag--japan" role="img" aria-label="Flag of Japan: white field with red circle centered">
+        <div class="japan__disc" aria-hidden="true"></div>
+      </div>
+      <p class="hint" style="margin-top:10px;color:#475569;font-size:13px;">White field with a centered crimson-red disc (Hinomaru).</p>
+    </div>
+
+    <!-- PROGRESS BAR -->
+    <div class="card" style="grid-column: 1 / -1;" aria-labelledby="progressTitle">
+      <h2 id="progressTitle" style="font-size:15px;margin:0 0 12px 0;">Progress Bar (accessible, animated)</h2>
+
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span>Download progress</span>
+          <span id="percentLabel" aria-hidden="true">0%</span>
+        </div>
+
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressRoot">
+          <div class="progress__bar" id="bar">
+            <span id="barText" style="padding-left:8px;padding-right:8px;white-space:nowrap;">0%</span>
+          </div>
+        </div>
+
+        <div class="controls" aria-hidden="false">
+          <input id="percentInput" type="number" min="0" max="100" value="50" aria-label="Set percent 0 to 100"/>
+          <button id="setBtn">Set</button>
+          <button id="animateBtn" class="secondary">Animate to 100%</button>
+          <button id="resetBtn" class="secondary">Reset</button>
+        </div>
+
+        <div class="hint" style="margin-top:6px;">Tip: type a number (0–100) and click <strong>Set</strong>, or use <strong>Animate to 100%</strong>.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Basic, robust JS to control the progress bar and keep ARIA attributes in sync.
+    const root = document.getElementById('progressRoot');
+    const bar = document.getElementById('bar');
+    const barText = document.getElementById('barText');
+    const percentLabel = document.getElementById('percentLabel');
+    const input = document.getElementById('percentInput');
+    const setBtn = document.getElementById('setBtn');
+    const animateBtn = document.getElementById('animateBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    function setProgress(value, { animate=true } = {}) {
+      value = Math.max(0, Math.min(100, Number(value) || 0));
+      // update width and label
+      if (!animate) {
+        bar.style.transition = 'none';
+        requestAnimationFrame(()=> {
+          bar.style.width = value + '%';
+          barText.textContent = value + '%';
+          percentLabel.textContent = value + '%';
+          root.setAttribute('aria-valuenow', String(value));
+          // restore transition after frame
+          requestAnimationFrame(()=> bar.style.transition = '');
+        });
+      } else {
+        bar.style.width = value + '%';
+        barText.textContent = value + '%';
+        percentLabel.textContent = value + '%';
+        root.setAttribute('aria-valuenow', String(value));
+      }
+    }
+
+    setBtn.addEventListener('click', ()=> {
+      const val = Number(input.value);
+      if (Number.isNaN(val)) return;
+      setProgress(val);
+    });
+
+    animateBtn.addEventListener('click', ()=> {
+      // Animate smoothly to 100% in steps to show progress.
+      const start = Number(root.getAttribute('aria-valuenow')) || 0;
+      const end = 100;
+      const duration = 1200; // ms
+      const startTime = performance.now();
+      function step(now){
+        const t = Math.min(1, (now - startTime) / duration);
+        const eased = t<.5 ? 2*t*t : -1 + (4 - 2*t)*t; // simple ease
+        const val = Math.round(start + (end - start) * eased);
+        setProgress(val, { animate: false });
+        if (t < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+
+    resetBtn.addEventListener('click', ()=> setProgress(0, { animate: true }));
+
+    // initialize to 0
+    setProgress(0, { animate: false });
+
+    // Keyboard convenience: enter in input triggers Set
+    input.addEventListener('keydown', (e)=>{
+      if (e.key === 'Enter') setBtn.click();
+    });
+  </script>
+</body>
+</html>
