@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Profile Card</title>  
+
+  <!-- Remix Icon CDN for social icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <style>  
+    .profile-card {  
+      max-width: 400px;  
+      margin: 40px auto;  
+      padding: 20px;  
+      border-radius: 5px;  
+      text-align: center;  
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);  
+      background: #fff;  
+    }  
+
+    .profile-card img {  
+      width: 120px;  
+      height: 120px;  
+      border-radius: 35%;  
+      object-fit: cover;  
+      border: 3px solid #ddd;  
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);  
+    }
+
+    .link {
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+    }
+
+    .link ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      list-style: none;
+      gap: 10px;
+      font-size: 24px;
+      margin-top: 10px;
+      padding: 0;
+    }
+
+    .link ul a {
+      text-decoration: none;
+      color: black;
+    }
+
+    button {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      border: none;
+      margin-top: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .ri-twitter-x-line:hover,
+    .ri-discord-fill:hover,
+    .ri-linkedin-line:hover {
+      border-bottom: 3px solid black;
+      border-radius: 2px;
+    }
+  </style>  
+</head>  
+<body>  
+  <div class="profile-card">  
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6pIwOUxFUvKgcQGFJP2oSFCwLQ_GQXXfWjrhVt38Nawj1-KIwudsWA8i&s=10" alt="Profile Picture">  
+    <h3>Abubakar Sadiq</h3>  
+    <p>Basic Skill in HTML website development. Forefront of Layer Webpage alignment with interface and detection-based alignment.</p>  
+
+    <!-- Social Links Section -->
+    <div class="link">
+      <ul>
+        <li><a href="#"><button><i class="ri-twitter-x-line"></i></button></a></li>
+        <li><a href="#"><button><i class="ri-discord-fill"></i></button></a></li>
+        <li><a href="#"><button><i class="ri-linkedin-line"></i></button></a></li>
+      </ul>
+    </div>
+  </div>
+</body>  
+</html>
