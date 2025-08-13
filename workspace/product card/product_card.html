@@ -8,8 +8,8 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #facc15;
+            padding: 10px;
+            background-color: white;
         }
 
         /* Flex container */
@@ -25,28 +25,28 @@
             display: flex;
             flex-direction: column; /* stack content horizontally */
             justify-content: space-between; /* pushes price to center */
-            border: 5px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            width: 200px;
-            background-color: #facc15;
+            border: 1px solid lightpink;
+            border-radius: 5px;
+            padding: 100px;
+            width: 300px;
+            background-color: transparent;
             box-shadow: 0 6px 12px rgba(0,0,0,0.08);
         }
 
         .product-card img {
             width: 100%;
             border-radius: 10px;
-            margin-bottom: 10px;
+            margin-bottom:  6px;
         }
 
         .product-card h3 {
             margin: 10px 0;
-            font-size: 16px;
+            font-size: 30px;
         }
 
         .product-card p {
-            font-size: 14px;
-            margin: 5px 0;
+            font-size: 21px;
+            margin: 1px 0;
             flex-grow: 1; /* pushes price/button to bottom */
         }
 
@@ -57,9 +57,9 @@
 
         .product-card button {
             margin-top: 10px;
-            padding: 8px 12px;
-            border: none;
-            border-radius: 10px;
+            padding: 12px 15px;
+            border: 5px;
+            border-radius: 6px;
             cursor: pointer;
             font-weight: bold;
         }
@@ -68,30 +68,30 @@
 <body>
     <div class="container">
         <!-- Product 1 -->
-        <div class="product-card" style="background-color: #fef3c7;">
+        <div class="product-card" style="background-color:  white;">
             <img src="https://i.ebayimg.com/images/g/UEgAAeSwW1FoRk2U/s-l1200.webp" alt="Wireless Headphones">
-            <h3 style="color: #b45309;">Wireless Bluetooth Headphones</h3>
-            <p style="color: #78350f;">Crystal clear sound, 20h battery life, noise-cancelling mic.</p>
-            <p class="price" style="color: #92400e;">$59.99</p>
-            <button style="background-color: #fde047; color: #1e3a8a;">Buy Now</button>
+            <h3 style="color: black;">Wireless Bluetooth Headphones</h3>
+            <p style="color: black;">Crystal clear sound, 20h battery life, noise-cancelling mic.</p>
+            <p class="price" style="color: black;">$59.99</p>
+            <button style="background-color: greenyellow; color: black;">Buy Now</button>
         </div>
 
         <!-- Product 2 -->
-        <div class="product-card" style="background-color: #1e3a8a;">
+        <div class="product-card" style="background-color: white;">
             <img src="https://i.ebayimg.com/images/g/fvgAAOSw7gpkUhvW/s-l1200.webp" alt="Sport Sneakers">
-            <h3 style="color: #facc15;">Sport Performance Sneakers</h3>
-            <p style="color: #fef3c7;">Lightweight, breathable mesh with shock-absorbent sole.</p>
-            <p class="price" style="color: #fbbf24;">$79.99</p>
-            <button style="background-color: #fde047; color: #1e3a8a;">Buy Now</button>
+            <h3 style="color: black;">Sport Performance Sneakers</h3>
+            <p style="color: black;">Lightweight, breathable mesh with shock-absorbent sole.</p>
+            <p class="price" style="color: black;">$79.99</p>
+            <button style="background-color: orangered; color: white;">Buy Now</button>
         </div>
 
         <!-- Product 3 -->
-        <div class="product-card" style="background-color: #1d4ed8;">
+        <div class="product-card" style="background-color: white;">
             <img src="https://i.ebayimg.com/images/g/esEAAOSwafdd06PW/s-l1200.webp" alt="Smart Fitness Watch">
-            <h3 style="color: #facc15;">Smart Fitness Watch</h3>
-            <p style="color: #fef9c3;">Track heart rate, steps, and sleep with style.</p>
-            <p class="price" style="color: #fde047;">$129.99</p>
-            <button style="background-color: #fde047; color: #1d4ed8;">Buy Now</button>
+            <h3 style="color: black;">Smart Fitness Watch</h3>
+            <p style="color: black;">Track heart rate, steps, and sleep with style.</p>
+            <p class="price" style="color: black;">$129.99</p>
+            <button style="background-color: lightblue; color: white;">Buy Now</button>
         </div>
     </div>
 </body>
