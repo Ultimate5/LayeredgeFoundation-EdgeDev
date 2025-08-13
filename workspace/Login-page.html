@@ -6,7 +6,8 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, orange, purple silver);
+      background: linear-gradient(135deg, orange, purple, silver);
+      background-size: cover;
       display: flex;
       height: 100vh;
       justify-content: center;
@@ -15,21 +16,21 @@
     }
 
     .container {
-      background-color: #ffffff;
-      padding: 100px;
-      border-radius: 30px;
-      box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
-      width: 500px;
+      background-color: rgba(255, 255, 255, 0.95); /* slightly transparent white to blend with gradient */
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+      width: 400px;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 30px;
     }
 
     label {
       display: block;
-      margin-top: 10px;
+      margin-top: 10px
     }
 
     input[type="text"],
@@ -50,8 +51,7 @@
       margin-bottom: 10px;
     }
 
-    .password-toggle input {
-      margin-right: 6px;
+    .password-toggle input {margin-right: 6px;
     }
 
     .remember-forgot {
@@ -62,8 +62,7 @@
       font-size: 14px;
     }
 
-    .remember-forgot label {
-      margin: 0;
+    .remember-forgot label { margin: 0;
     }
 
     .remember-forgot a {
@@ -111,8 +110,9 @@
     .hidden {
       display: none;
     }
+  </style>
+</head>
 <body>
-
   <div class="container">
     <!-- Login Form -->
     <div id="loginForm">
@@ -173,7 +173,6 @@
       forgotForm.classList.toggle("hidden");
     }
   </script>
-</head>
-</style>
-   </body>
+
+</body>
 </html>
